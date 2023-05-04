@@ -41,7 +41,7 @@ public class Tape extends DaringDuckLab{
     public String countOnes() {
         int count = 0;
         for(int i = 0; i < tape.length; i++){
-            if(tape[i] == 1){
+            if(tape[i] == '1'){
                 count++;
             }
         }

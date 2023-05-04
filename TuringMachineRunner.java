@@ -5,7 +5,7 @@ public class TuringMachineRunner extends DaringDuckLab{
         State finalState = new State("final", true);
 
         // Define the transitions for the start state
-        Transition startToFinal = new Transition(finalState, '1', true);
+        Transition startToFinal = new Transition(finalState, '1', "right");
         startState.addTransition('0', startToFinal);
 
         // Define the Turing machine
@@ -16,10 +16,6 @@ public class TuringMachineRunner extends DaringDuckLab{
         turingMachine.run();
 
         // Output the result
-        if (turingMachine.getOutput() == 1) {
-            System.out.println("Success!");
-        } else {
-            System.out.println("Failure.");
-        }
+        System.out.println(turingMachine.getOutput());
     }
 }
