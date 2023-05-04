@@ -29,7 +29,7 @@ public class State extends DaringDuckLab{
                 return transitions.get(i);
             }
         }
-        return new Transition();
+        throw new IllegalArgumentException("please provide a symbol that is actually a part of a valid transition dumbass");
     }
 
     public boolean isTerminal(){
