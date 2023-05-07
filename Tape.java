@@ -13,6 +13,11 @@ public class Tape extends DaringDuckLab{
             char[] newTape = new char[tape.length * 2];
             System.arraycopy(tape, 0, newTape, tape.length, tape.length);
             tape = newTape;
+            for(int i = 0; i < tape.length; i++){
+                if(tape[i] != 'a' && tape[i] != '1'){
+                    tape[i] = '0';
+                }
+            }
             pos = tape.length / 2;
         } else {
             pos--;
@@ -25,6 +30,11 @@ public class Tape extends DaringDuckLab{
             char[] newTape = new char[tape.length * 2];
             System.arraycopy(tape, 0, newTape, 0, tape.length);
             tape = newTape;
+            for(int i = 0; i < tape.length; i++){
+                if(tape[i] != 'a' && tape[i] != '1'){
+                    tape[i] = '0';
+                }
+            }
         }
         //no else statement necessary cause you add to the pos either way
         pos++;
