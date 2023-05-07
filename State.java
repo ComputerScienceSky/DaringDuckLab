@@ -15,7 +15,9 @@ public class State extends DaringDuckLab{
     //symbol is the input in which the state takes this transition
     public void addTransition(char symbol, Transition transition){
         //adds the symbol to the end of the array
-        symbols = new char[symbols.length + 1];
+        char[] newSymbols = new char[symbols.length + 1];
+        System.arraycopy(symbols, 0, newSymbols, symbols.length, symbols.length);
+        symbols = newSymbols;
         symbols[symbols.length - 1] = symbol;
 
         //adds transition to the end of the transition list
